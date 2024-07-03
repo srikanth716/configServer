@@ -1,0 +1,3 @@
+com\example\configclient\ConfigClientController.class
+com\example\configclient\ConfigClientApplication.class
+com\example\configclient\PrintConfigProperties.class

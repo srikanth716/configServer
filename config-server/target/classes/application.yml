@@ -1,0 +1,33 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: configserver
+
+  profiles:
+    active: composite
+
+  cloud:
+    config:
+      server:
+        composite:
+          - type: git
+            uri: https://github.com/mosip/inji-config
+            clone-on-start: true
+            # Add the branch if not using main
+            default-label: develop
+          - type: git
+            uri: https://github.com/mosip/mosip-config
+            clone-on-start: true
+            default-label: develop
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    org.springframework.cloud: DEBUG
