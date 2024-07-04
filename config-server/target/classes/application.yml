@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: configserver
+    name: config-server
 
   profiles:
     active: composite
@@ -17,10 +17,12 @@ spring:
             clone-on-start: true
             # Add the branch if not using main
             default-label: develop
+            searchPaths: /
           - type: git
             uri: https://github.com/mosip/mosip-config
             clone-on-start: true
             default-label: develop
+            searchPaths: /
 
 management:
   endpoints:
