@@ -16,7 +16,7 @@ public class ConfigClientApplication {
         SpringApplication.run(ConfigClientApplication.class, args);
     }
 
-	@Value("${safetynet.api.url:default_value}")
+	@Value("${mosip.supported-languages:default_value}")
     private String data;
 
     @GetMapping("/config")
