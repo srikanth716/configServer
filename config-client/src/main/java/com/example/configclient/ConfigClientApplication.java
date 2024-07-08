@@ -16,12 +16,12 @@ public class ConfigClientApplication {
         SpringApplication.run(ConfigClientApplication.class, args);
     }
 
-	@Value("${mosip.kernel.crypto.hash-algorithm-name:default_value}")
-    private String syncdataUrl;
+	@Value("${safetynet.api.url:default_value}")
+    private String data;
 
     @GetMapping("/config")
     public String getConfig() {
-        System.out.println("syncdataUrl: " + syncdataUrl);
-        return "syncdataUrl: " + syncdataUrl;
+        System.out.println("Data Response: " + data);
+        return "Data Response: " + data;
     }
 }
