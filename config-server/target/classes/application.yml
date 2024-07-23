@@ -13,17 +13,18 @@ spring:
       server:
         composite:
           - type: git
-            uri: https://github.com/srikanth716/inji-config
+            uri: https://github.com/mosip/mosip-config 
             clone-on-start: true
             # Add the branch if not using main
             default-label: develop
             searchPaths: /
+            order: 2
           - type: git
-            uri: https://github.com/mosip/mosip-config
+            uri: https://github.com/srikanth716/inji-config
             clone-on-start: true
             default-label: develop
             searchPaths: /
-
+            order: 1
 management:
   endpoints:
     web:
